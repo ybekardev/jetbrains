@@ -1,5 +1,6 @@
 package org.jetBrains.practice;
 
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -36,7 +37,7 @@ public class ArraysPractice {
     }
 
 
-    public static void main(String[] args) {
+  /*  public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number: ");
         int len = scanner.nextInt();
@@ -46,7 +47,7 @@ public class ArraysPractice {
         }
         System.out.println(Arrays.toString(arr));
     }
-
+*/
     @Test
     void character(){
         char [] ch = {'a', 'r', 'a', 'g', 'a', 'u', 'q', 'a'};
@@ -60,6 +61,38 @@ public class ArraysPractice {
         }
         System.out.print("line-3 " +count);
     }
+
+@Test
+    public void t(){
+    for (int i = 0; i < 5; i++) {
+        System.out.println(i);
+        if (i < 3) {
+            continue;
+        } else {
+            for (int j = 0; j < 5; j++) {
+                System.out.println(j);
+            }
+        }
+    }
+}
+
+ /*   public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean done = false;
+        while (!done) {
+           int  i = scanner.nextInt();
+        if (i ==0){
+            System.out.println("0");
+            break;
+        } else if (i % 2 == 1) {
+            System.out.println("odd");
+        }else if (i % 2 == 0) {
+            System.out.println("even");
+        }
+    }
+
+}*/
+
 
 
 }

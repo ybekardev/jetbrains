@@ -84,6 +84,7 @@ public class FileReading {
         //FileInputStream is useful to read data from a file in the form of sequence of bytes.
         //FileInputStream is meant for reading streams of raw bytes such as image data.
         FileInputStream file = new FileInputStream("src/main/resources/payload.json");
+        System.out.println("The lenght of the characters: " + file.read());
         int i;
         while((i = file.read()) != -1){
             System.out.print((char)i);
