@@ -74,7 +74,28 @@ public class ArrayListPractice {
 
         List<String> weekDays = daysOfWeek.subList(0, 5);
         System.out.println(weekDays);
+    }
 
+    @Test
+    public void testColl(){
+        var num = new ArrayList<>(List.of(3,6,1,8,3,9,2,4));
+        Collections.sort(num);
+        System.out.println(num);
+        Collections.reverse(num);
+        System.out.println(num);
+        Collections.shuffle(num);
+        System.out.println(num);
+        //The rotate method shifts the elements in the specified list by the given distance.
+        Collections.rotate(num,2);
+        System.out.println(num);
+        //frequency counts the number of elements equal to the specified object;
+        //min and max according to the natural order of elements;
+        //disjoint checks the two collections do not contain common elements.
+        System.out.println(Collections.min(num));
+        System.out.println(Collections.max(num));
+        System.out.println(Collections.frequency(num ,3));
+        System.out.println(Collections.disjoint(num, List.of(0)));
+        System.out.println(Collections.disjoint(num, List.of(1)));
 
     }
 
