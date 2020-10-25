@@ -16,8 +16,9 @@ public class ArraysUtils {
         System.out.println(Arrays.equals(num1, num2));
 
         int[] arr = {13, 7, 6, 45, 21, 9, 101, 102};
+        Arrays.stream(arr).sorted().forEach(n -> System.out.print(n + " "));
         Arrays.sort(arr);
-        System.out.printf("Modified array: %s", Arrays.toString(arr));
+        System.out.printf("\nModified array: %s", Arrays.toString(arr));
 
         String strArr[] = {"geeks.com", "tutorialpoint.com", "jetbrains.org"};
         System.out.println("\n" + Arrays.toString(strArr));

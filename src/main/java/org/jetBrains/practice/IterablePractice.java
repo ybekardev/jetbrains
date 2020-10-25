@@ -1,8 +1,6 @@
 package org.jetBrains.practice;
 
 import org.junit.jupiter.api.Test;
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.*;
 
 public class IterablePractice {
@@ -25,7 +23,7 @@ public class IterablePractice {
 
         Set<Integer> i = Set.of(1,2,3,4,5);
         i.forEach(n -> System.out.println(n));
-
+        System.out.println("The value: " + i);
 
 
         System.out.println("--- Iterator ---");
@@ -76,6 +74,20 @@ public class IterablePractice {
         }
 
 
+        Set<Integer> number = new HashSet<>();
+        number.add(3);
+        number.add(4);
+        number.add(2);
+        number.add(3);
+
+        System.out.println(number);
+        number.forEach(nm -> System.out.println(nm));
+        number.forEach(System.out::println);
+
+        Iterator<Integer> iter2 = number.iterator();
+        while(iter2.hasNext()){
+            System.out.println(iter2.next());
+        }
 
     }
 }

@@ -2,6 +2,8 @@ package org.jetBrains.practice;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 public class Ternary {
 
     @Test
@@ -20,5 +22,6 @@ public class Ternary {
 
         max = a > b ? a : b;
         System.out.println("hello max: " + max);
+
     }
 }
