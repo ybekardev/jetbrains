@@ -1,8 +1,6 @@
 package org.jetBrains.practice;
 
 import org.junit.jupiter.api.Test;
-
-import javax.swing.event.TreeSelectionEvent;
 import java.util.*;
 
 public class SetCollections {
@@ -133,5 +131,47 @@ public class SetCollections {
 
         System.out.println(stack2.pop()); // throws EmptyStackException
         //The method pop() always throws an exception if the stack is empty.
+
+        //Can't' you create an object of Collection<E> or List<E> by using the new keyword:
+        //List<String> ls = new List<String>();
+        //Collections<String> cl = new Collections<>();
+    }
+
+
+    @Test
+    public void testCollections(){
+        List<Integer> l = new ArrayList<>(Arrays.asList(1,3,6,9));
+        System.out.println(Collections.max(l));
+        int n = Collections.max(l);
+        System.out.println(n);
+    }
+
+    @Test
+    public void Test(){
+        List<String> list = new ArrayList<>(Arrays.asList("ImageButton JTextField JTextArea CheckBox JMenu"));
+
+        List<String> l = new ArrayList<>();
+        for(String s : list){
+            l.add(s);
+        }
+        String str = l.get(0);
+        String [] arr = str.split(" ");
+        System.out.println(arr.length);
+        String s = "";
+        for(int i=arr.length-1; i>=0; i--){
+            if(arr[i].startsWith("J")){
+                s += arr[i].substring(1) +"\n";
+            }
+        }
+        System.out.println(s);
+
+
+
+       /* Object [] arr = list.toArray();
+        System.out.println(Arrays.toString(arr));
+        String[] ay = Arrays.toString(arr).split(" ");
+
+        System.out.println(Arrays.toString(ay));*/
+
     }
 }
