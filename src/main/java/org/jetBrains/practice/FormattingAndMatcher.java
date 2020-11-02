@@ -2,7 +2,10 @@ package org.jetBrains.practice;
 
 import org.junit.jupiter.api.Test;
 
-public class Formatting {
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class FormattingAndMatcher {
 
     //Java will replace %c - (char), %s - (string), %d - (int, short, byte, long), %f - (double, float)
     //%n newline character breaks the line every time it was used.
@@ -126,7 +129,7 @@ public class Formatting {
         System.out.println("cab".matches(s));
         System.out.println("caaaaaaaaab".matches(s));
         System.out.println("cb".matches(s)); //false
-        String s2 = "a[0-3]*"; // a and zero to three any permutaion
+        String s2 = "a[0-3]*"; // a and zero to three any permutation
         System.out.println("a0".matches(s2));
         System.out.println("a123321".matches(s2));
         String s3 = ".*json.*";
@@ -159,5 +162,40 @@ public class Formatting {
 
     }
 
+    @Test
+    public void testPattern() {
+        String s = "The programming language Java";
+        Pattern pattern = Pattern.compile(".*[Jj]ava.*");
+        Matcher matcher = pattern.matcher(s);
+        System.out.println(matcher.matches());
+        System.out.println(s.matches(String.valueOf(pattern)));
 
+        String s2 = "Java tool is a programming language";
+        Pattern.compile("tool");
+        matcher = pattern.matcher(s2);
+        System.out.println(matcher.find());
+
+
+        String text = "Java supports JAVA";
+        Pattern jp = Pattern.compile("java", Pattern.CASE_INSENSITIVE);
+        Matcher m = jp.matcher(text);
+        while (matcher.find()) {
+            System.out.println(m.group());
+        }
+    }
+
+    @Test
+    public void t(){
+        String text = "Regex is a powerful tool for programmers";
+
+        Pattern pattern = Pattern.compile("tool");
+        Matcher matcher = pattern.matcher(text);
+        System.out.println(matcher.matches()); // false, the whole string does not match the pattern
+        System.out.println(matcher.find());
+    }
+
+    /*
+    input stream that reads data from a source;
+    output stream that writes data to a specified destination.
+    */
 }

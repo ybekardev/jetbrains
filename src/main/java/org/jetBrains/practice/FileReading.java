@@ -112,4 +112,67 @@ public class FileReading {
     }
 
 
+    /*
+    Streams are divided into byte and character ones.
+    Byte output streams allow writing sequences of bytes.
+    It is necessary for working with binary files.
+    Character output streams are intended for writing text.
+
+    Readers - input ex: FileInputStream , Writers - output ex: FileOutputStream
+    Character input stream classes usually end with Reader.
+    Byte input streams end with InputStream.
+    */
+
+    @Test
+    public void inOut() throws IOException {
+        String str = "stream";
+        byte [] strByte = str.getBytes();
+        System.out.println(strByte);
+
+        Reader reader = new FileReader("src/main/resources/payload.json");
+
+        char first = (char) reader.read(); // i
+        char second = (char) reader.read(); // n
+
+        char[] others = new char[12];
+        int number = reader.read(others); // 10
+
+        System.out.print(first + "*" + second + "*" + number);
+        System.out.println();
+
+        FileReader reader1 = new FileReader("src/main/resources/payload.json");
+        int charNum = reader1.read();
+        while (charNum != -1){
+            char character = (char) charNum;
+            System.out.print(character);
+            charNum = reader1.read();
+        }
+
+        reader1.close();
+
+        System.out.println();
+
+        FileInputStream fis = new FileInputStream("src/main/resources/payload.json");
+        byte [] b = new byte[11];
+        int numOfB = fis.read(b);
+        System.out.println(numOfB); // prints 11
+
+        fis.close();
+    }
+
+    //Pressing Enter doesn't close the input stream. It is still opened and waits for input. To actually close the input stream you need to produce an end-of-file event. In IDEA, you should press Ctrl+D (Windows and Linux) or <command>+D (MacOS).
+    //If you need to read a text, use character input streams. Otherwise, for example, while reading audio, video, zip and etc., use byte input streams
+
+
+    @Test
+    public void testMemory(){
+        Runtime runtime  = Runtime.getRuntime();
+        long totalMemory = runtime.totalMemory();
+        long freeMemory = runtime.freeMemory();
+        System.out.println("Total memory: " + totalMemory);
+        System.out.println("Free memory: " + freeMemory);
+        System.out.println("Used memory:" + (totalMemory - freeMemory));
+    }
+
+
 }

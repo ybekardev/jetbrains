@@ -1,0 +1,102 @@
+Comparing strings
+A very common situation occurs when we try to compare a String variable and a string literal.
+String str = null;
+
+if (str.equals("abc")) { // it throws NPE
+    System.out.println("The same");
+}
+To avoid NPE here we can call the equals method on literal rather than the object:
+ String str = null;
+
+if ("abc".equals(str)) { // no NPE here
+    System.out.println("The same");
+}
+
+But what if we have two variables of the type String? Any of them may happen to be null. In this case, we can use the special auxiliary class java.util.Objects.
+String s1 = null;
+String s2 = null;
+
+if (Objects.equals(s1, s2)) { // no NPE here
+    System.out.println("Strings are the same");
+}
+This approach is recommended in modern Java programming since it is easy for reading and does not throw NPE.
+
+
+Let’s see another example:
+String someString = null; // a reference type can be null
+
+int size = someString.length(); // NullPointerException (NPE)
+int size = str != null ? str.length() : 0; // if the string is empty, the size is 0
+
+
+Input streams should be closed after they were used.
+Reader reader = null;
+
+try {
+    reader = new FileReader("file.txt");
+    // code which may throw an exception
+} finally {
+    reader.close();
+}
+
+Better code:
+
+void readFile() throws IOException {
+    Reader reader = null;
+    try {
+        reader = new FileReader("file.txt");
+        throw new RuntimeException("Exception1");
+    } finally {
+        try {
+            reader.close(); // throws new RuntimeException("Exception2")
+        } catch (Exception e) {
+            // handle the Exception2
+        }
+    }
+}
+
+Still NOT a good practice, so we apply the below try-with idea:
+
+try (Scanner scanner = new Scanner(new File("file.txt"))) {
+    int first = scanner.nextInt();
+    int second = scanner.nextInt();
+    System.out.println("arguments: " + first + " " + second);
+}
+
+
+Java – Try with Resources
+
+Support for try-with-resources – introduced in Java 7 – allows us to declare resources to be used in a try block with the assurance that the resources will be closed when after the execution of that block.
+The resources declared must implement the AutoCloseable interface.
+
+Simply put, to be auto-closed, a resource must be both declared and initialized inside the try, as shown below:
+
+try (PrintWriter writer = new PrintWriter(new File("test.txt"))) {
+    writer.println("Hello World");
+}
+
+Multiple resources can be declared just fine in a try-with-resources block by separating them with a semicolon:
+
+try (Scanner scanner = new Scanner(new File("testRead.txt"));
+    PrintWriter writer = new PrintWriter(new File("testWrite.txt"))) {
+    while (scanner.hasNext()) {
+	writer.print(scanner.nextLine());
+    }
+}
+
+Let's compare the following code samples – first is a typical try-catch-finally block, then the new approach, using an equivalent try-with-resources block:
+
+Scanner scanner = null;
+try {
+    scanner = new Scanner(new File("test.txt"));
+    while (scanner.hasNext()) {
+        System.out.println(scanner.nextLine());
+    }
+} catch (FileNotFoundException e) {
+    e.printStackTrace();
+} finally {
+    if (scanner != null) {
+        scanner.close();
+    }
+}
+
