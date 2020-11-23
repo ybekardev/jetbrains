@@ -198,4 +198,10 @@ public class FormattingAndMatcher {
     input stream that reads data from a source;
     output stream that writes data to a specified destination.
     */
+
+    @Test
+    public void te(){
+        String s = "\\^abc\\g";
+        System.out.println(s);
+    }
 }
