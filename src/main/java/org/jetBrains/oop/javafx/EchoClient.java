@@ -1,4 +1,4 @@
-package org.jetBrains.oop;
+package org.jetBrains.oop.javafx;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

@@ -1,4 +1,4 @@
-package org.jetBrains.oop;
+package org.jetBrains.oop.javafx;
 
 import javax.swing.*;
 import java.awt.*;
