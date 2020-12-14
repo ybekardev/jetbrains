@@ -1,7 +1,5 @@
 package org.jetBrains.oop.concepts;
 
-import java.util.Date;
-
 public class User {
     private String firstName;
     private String lastName;

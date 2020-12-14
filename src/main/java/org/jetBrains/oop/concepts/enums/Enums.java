@@ -1,4 +1,4 @@
-package org.jetBrains.oop.concepts;
+package org.jetBrains.oop.concepts.enums;
 
 import java.util.Scanner;
 

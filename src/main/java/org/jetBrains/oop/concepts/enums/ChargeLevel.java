@@ -1,4 +1,4 @@
-package org.jetBrains.oop.concepts;
+package org.jetBrains.oop.concepts.enums;
 
 public enum ChargeLevel {
     FULL(4, "green"),
