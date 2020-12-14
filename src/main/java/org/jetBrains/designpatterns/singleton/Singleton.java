@@ -3,7 +3,7 @@ package org.jetBrains.designpatterns.singleton;
 public class Singleton {
 
     //The pattern ensures that there is only one instance of the class and provides global access to it for the outer world.
-    private static volatile Singleton instance = null; // volatile guarantees the visibility for other threads of writes to that variable
+    private static volatile Singleton instance = null; // volatile guarantees the visibility for other threads of writes to that variable // volatile keyword here makes sure that the changes made in one thread are immediately reflect in other thread
     private Singleton(){ }
 
         public static synchronized Singleton getInstance(){ //if you add sync in the method name it will be thread-safe
