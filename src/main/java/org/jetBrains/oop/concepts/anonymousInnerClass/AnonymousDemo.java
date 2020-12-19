@@ -1,7 +1,5 @@
 package org.jetBrains.oop.concepts.anonymousInnerClass;
 
-import com.sun.security.jgss.GSSUtil;
-
 public class AnonymousDemo {
     public static void main(String[] args) {
         Person person = new Person();
@@ -21,6 +19,7 @@ class AnonymousDemo2 {
     public static void main(String[] args) {
         String name = "Haydar";
         Age myAge = new Age() {
+            private int age =32;
             @Override
             public void getAge() {
                String result = String.format("Name is %s: %nAge is %d:", name, age );

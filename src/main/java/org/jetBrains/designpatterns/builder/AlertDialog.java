@@ -47,32 +47,26 @@ public class AlertDialog {
 
        Builder() {
        }
-
        Builder setTitle(String title) {
            this.title = title;
            return this;
        }
-
        Builder setText(String text) {
            this.text = text;
            return this;
        }
-
        Builder setApplyButton(String applyButton) {
            this.applyButton = applyButton;
            return this;
        }
-
        Builder setCancelButton(String cancelButton) {
            this.cancelButton = cancelButton;
            return this;
        }
-
        Builder setFooter(String footer) {
            this.footer = footer;
            return this;
        }
-
        Builder setPicture(String picture) {
            this.picture = picture;
            return this;
@@ -83,5 +77,4 @@ public class AlertDialog {
        }
 
    }
-
 }

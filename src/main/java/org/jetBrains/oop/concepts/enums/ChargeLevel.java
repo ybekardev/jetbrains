@@ -1,18 +1,20 @@
 package org.jetBrains.oop.concepts.enums;
 
 public enum ChargeLevel {
-    FULL(4, "green"),
-    HIGH(3, "green"),
-    MEDIUM(2, "yellow"),
-    LOW(1, "red");
+    FULL(4, "green", new int[]{1,2,3,4}),
+    HIGH(3, "green", new int[]{1,2,3,4}),
+    MEDIUM(2, "yellow", new int[]{1,2,3,4}),
+    LOW(1, "red", new int[]{1,2,3,4});
 
     int sections;
     String color;
+    int[] tire;
 
     //Enums include NO public constructors since we can't create an object from it!!!
-    ChargeLevel(int sections, String color) {
+    ChargeLevel(int sections, String color, int[] tire) {
         this.sections = sections;
         this.color = color;
+        this.tire = tire;
     }
 
     public int getSections() {
@@ -22,6 +24,8 @@ public enum ChargeLevel {
     public String getColor() {
         return color;
     }
+
+    public int[] getTire(){ return tire; }
 
     public static ChargeLevel findBySections(int sections) {
         //pay attention the for loop is not the same as in the main method with ChargeLeve.values()!!!

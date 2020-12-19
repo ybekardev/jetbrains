@@ -12,6 +12,8 @@ public enum EnumSingleton {
         this.days = days;
     }
 
+    // EnumSingleton(String monday, String tuesday, String wednesday, String thursday, String friday, String saturday, String sunday) {}
+
     public String[] getDays() {
         return this.days;
     }
