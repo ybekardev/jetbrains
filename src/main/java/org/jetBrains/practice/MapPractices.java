@@ -93,4 +93,27 @@ public class MapPractices {
         }
 
     }
+
+}
+
+
+class Example {
+    public static void main(String[] args) {
+        HashMap<Character, Integer> charCount = new HashMap<>();
+        String str = "aa ff grt dd";
+        char[] c = str.toCharArray();
+
+        for (char ch : c) {
+            if (charCount.containsKey(ch)) {
+                charCount.put(ch, charCount.get(ch) + 1);
+            } else {
+                charCount.put(ch, 1);
+            }
+        }
+
+        for (Map.Entry entry : charCount.entrySet()) {
+            System.out.println(entry.getKey() + " - " + entry.getValue());
+        }
+
+    }
 }
