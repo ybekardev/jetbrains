@@ -24,13 +24,10 @@ public class CarFacade {
         stereoSystem.off();
         stereoSystem.pause();
     }
-
     public void increaseHeatedSeats(){
         heatedSeats.increaseHeatLevel();
     }
-
     public void playTrack(String title){
         stereoSystem.playTrack(title);
     }
-
 }

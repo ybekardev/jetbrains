@@ -1,4 +1,4 @@
-package org.jetBrains.practice;
+package org.jetBrains.oop.javagcore.practice;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,7 +17,7 @@ public class LoggerPractice {
 
     @Test
     public void testLogger1(){
-        java.util.logging.Logger logger = java.util.logging.Logger.getLogger(org.jetBrains.practice.LoggerPractice.class.getName());
+        java.util.logging.Logger logger = java.util.logging.Logger.getLogger(org.jetBrains.oop.javagcore.practice.LoggerPractice.class.getName());
         logger.log(Level.INFO, "Logging Started... " + logger.getName());
 
     }

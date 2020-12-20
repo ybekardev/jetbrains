@@ -2,7 +2,7 @@ package org.jetBrains.designpatterns.staticfactory;
 
 public class Computer {
 
-    //getters and setters can be used to pull in factoryclient class
+    //getters and setters can be used to pull in factory client class
     private ComputerType computerType;
     private long ram;
     private long cpu;

@@ -1,9 +1,8 @@
-package org.jetBrains.practice;
+package org.jetBrains.oop.javagcore.practice;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class ArraysPractice {
 

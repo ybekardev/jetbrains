@@ -1,6 +1,4 @@
-package org.jetBrains.oop.concepts;
-
-import org.w3c.dom.ls.LSOutput;
+package org.jetBrains.oop.javagcore;
 
 public class MutableImmutable {
 

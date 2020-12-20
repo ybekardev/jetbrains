@@ -1,11 +1,8 @@
-package org.jetBrains.practice;
+package org.jetBrains.oop.javagcore.practice;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
 
 import java.util.Objects;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class Method {
 

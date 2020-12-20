@@ -1,4 +1,4 @@
-package org.jetBrains.oop.javagenerics;
+package org.jetBrains.oop.javagcore;
 
 /*
 A class can have any number of type parameters.

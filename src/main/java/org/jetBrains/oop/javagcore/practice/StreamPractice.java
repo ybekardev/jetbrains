@@ -1,4 +1,4 @@
-package org.jetBrains.practice;
+package org.jetBrains.oop.javagcore.practice;
 
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
@@ -7,7 +7,7 @@ import java.util.Comparator;
 public class StreamPractice {
 
     @Test
-    public void practice() {
+    public void streamPractice() {
         Arrays.asList(1, 2, 3, 6, 3, 7, 2, 4).stream().sorted().forEach(n -> System.out.println(n));
         System.out.println("=====");
         Arrays.asList(1, 2, 3, 6, 3, 7, 2, 4).stream().sorted().distinct().forEach(n -> System.out.println(n));
@@ -17,7 +17,7 @@ public class StreamPractice {
         Arrays.asList("Banana", "Kiwi").stream().sorted().map(str -> str.toUpperCase()).forEach(s -> System.out.println(s));
         System.out.println("=====");
         Arrays.asList("Banana", "Kiwi").stream().sorted().filter(str -> str.equals("Kiwi")).forEach(s -> System.out.println(s));
-
+    }
       /*
         List<Project> listOfProjects = DataGenerator.getProjects();
         return listOfProjects.stream().filter(st -> st.getProjectStatus().equals(status)).collect(Collectors.toList());
@@ -40,7 +40,8 @@ public class StreamPractice {
 
         List<User> listOfUsers = DataGenerator.getUsers();
         return (long) listOfUsers.stream().filter(ml -> ml.getGender().equals(Gender.MALE)).count();
-      */
+
 
     }
+     */
 }

@@ -12,10 +12,10 @@ public class MapFlatMap {
     }
 
     public static void mapFilter(){
+        //Stream<List<Integer>> str1 = Stream.of(Arrays.asList(2,6,8,1,3,9,4)); not working somehow
+
         List<Integer> list  = Arrays.asList(1,4,7,8,5,4,2,6);
         list.stream().filter(n -> n % 2 ==0).forEach(System.out::println);
-
-        //Stream<List<Integer>> str1 = Stream.of(Arrays.asList(2,6,8,1,3,9,4)); not working somehow
 
         List<Integer> str1 = Arrays.asList(2,6,8,1,3,9,4);
         str1.stream().map(n -> n / 2).collect(Collectors.toList());

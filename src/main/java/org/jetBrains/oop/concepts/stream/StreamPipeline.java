@@ -32,12 +32,8 @@ public class StreamPipeline {
 
     public static void dropwhile(){
         // It drops the elements which match the given predicate until the first element does not match it.
-        List<Integer> numbers =
-                Stream.of(3, 5, 1, 2, 0, 4, 5)
-                        .dropWhile(n -> n > 0)
-                        .collect(Collectors.toList());
-
-        System.out.println(numbers); // [0, 4, 5]
+        List<Integer> numbers = Stream.of(3, 5, 1, 2, 0, 4, 5).dropWhile(n -> n > 0).collect(Collectors.toList());
+        numbers.forEach(System.out::println);
     }
 
     public static void pipeline(){

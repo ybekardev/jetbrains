@@ -18,7 +18,6 @@ public class Streams {
         }
         System.out.println();
         //with stream
-        System.out.println(Arrays.toString(num.stream().toArray()));
         num.stream().forEach(System.out::println);
 
         listOfCompanies();

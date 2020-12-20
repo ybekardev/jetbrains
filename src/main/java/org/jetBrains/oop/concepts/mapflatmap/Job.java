@@ -68,9 +68,7 @@ class Demo {
         Stream<Integer> evenNums2 = Stream.iterate(0, x -> x < 10, x -> x + 2).limit(8);
         evenNums2.forEach(System.out::println);
 
-        IntStream.of(1, 2, 3, 4)
-                .asDoubleStream()
-                .forEach(System.out::println); // it prints doubles 1.0, 2.0, ...
+        IntStream.of(1, 2, 3, 4).asDoubleStream().forEach(System.out::println); // it prints doubles 1.0, 2.0, ...
 
         List<Integer> number = List.of(1, 5, 9);
         int sum1 = number.stream().mapToInt(i -> i).sum(); // 15

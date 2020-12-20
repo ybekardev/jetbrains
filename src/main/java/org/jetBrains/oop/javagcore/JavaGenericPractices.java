@@ -1,4 +1,4 @@
-package org.jetBrains.oop.javagenerics;
+package org.jetBrains.oop.javagcore;
 
 import org.junit.jupiter.api.Test;
 

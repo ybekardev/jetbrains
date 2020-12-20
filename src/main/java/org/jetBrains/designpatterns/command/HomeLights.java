@@ -15,7 +15,5 @@ public class HomeLights {
 
         controller.setCommand(lightsOff);
         controller.executeCommand();
-
-
     }
 }

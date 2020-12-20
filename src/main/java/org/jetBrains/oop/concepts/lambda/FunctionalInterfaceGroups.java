@@ -16,9 +16,9 @@ consumers that accept arguments and return no result.
         /*
         1) Functions
         Each function accepts a value as a parameter and returns a single value.
-        For example, the Function<T, R> is a generic interface that represents a function that accepts a value of type T and produces a result of type R.
+        For example, the Function<T, R> is a generic interface that represents
+        a function that accepts a value of type T and produces a result of type R.
          */
-
         // String to Integer function
         Function<String , Integer> converter = Integer::parseInt;
         System.out.println(converter.apply("2000"));
@@ -34,9 +34,9 @@ consumers that accept arguments and return no result.
         /*
         2) Operators
         Each operator takes and returns the values of the same type.
-        For example, UnaryOperator<T> represents an operator that accepts a value of type T and produces a result of the same type T.
+        For example, UnaryOperator<T> represents an operator that accepts a value of
+        type T and produces a result of the same type T.
          */
-
         // Long to Long multiplier
         UnaryOperator<Long> longMultiplier = val -> val * 10;
         System.out.println(longMultiplier.apply(4L));
@@ -50,9 +50,9 @@ consumers that accept arguments and return no result.
         /*
         3) Predicates
         Each predicate accepts a value as a parameter and returns true or false.
-        For example, the Predicate<T> is a generic interface that represents a predicate that accepts a value of type T and produces a boolean-valued result.
+        For example, the Predicate<T> is a generic interface that represents a predicate
+        that accepts a value of type T and produces a boolean-valued result.
          */
-
         // Character to boolean predicate
         Predicate<Character> isDigit = Character::isDigit;
         isDigit.test('h'); // the result is false (boolean)
@@ -62,9 +62,9 @@ consumers that accept arguments and return no result.
 
         /*4) Suppliers
         Each supplier accepts no parameters and returns a single value.
-        For example, Supplier<T> represents a supplier that accepts no arguments and returns a value of type T.
+        For example, Supplier<T> represents a supplier that accepts no arguments
+        and returns a value of type T.
          */
-
         Supplier<String> sup = () -> "Hello";
         System.out.println(sup.get());
         BooleanSupplier boolSup = () -> true;
@@ -75,9 +75,9 @@ consumers that accept arguments and return no result.
         /*
         5) Consumers
         Each consumer accepts a value as a parameter and returns no output.
-        For example, the Consumer<T> is an interface that represents a consumer that accepts a value of type T and returns no result.
+        For example, the Consumer<T> is an interface that represents a consumer that accepts
+        a value of type T and returns no result.
          */
-
         Consumer<String> printer = System.out::print;
         printer.accept("Hi");
     }

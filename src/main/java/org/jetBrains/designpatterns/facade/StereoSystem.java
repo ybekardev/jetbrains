@@ -26,7 +26,6 @@ public class StereoSystem {
     public void pause(){
         System.out.println("Track " + trackTitle + " is paused");
     }
-
     public String getTrackTitle(){
         return ("The current playing song is: " + trackTitle);
     }
@@ -38,9 +37,7 @@ public class StereoSystem {
             this.volume = volume;
         }
     }
-
     public int getVolume(){
         return volume;
     }
-
 }

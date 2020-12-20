@@ -38,23 +38,18 @@ public class StreamFilter {
         Predicate<Integer> between11_23 = n -> n >=11 && n <= 23;
         List<Integer> list = primeNumbers.stream().filter(between11_23).collect(Collectors.toList());
         System.out.println(list);
+        list.forEach(System.out::println);
     }
 
     private static boolean isPrime(long number) {
         if (number == 2) {
             return true;
         }
-        return LongStream
-                .iterate(2, n -> n + 1)
-                .limit((long) Math.sqrt(number))
-                .filter(n -> number % n == 0)
+        return LongStream.iterate(2, n -> n + 1).limit((long) Math.sqrt(number)).filter(n -> number % n == 0)
                 .count() == 0;
     }
 
     private static boolean isPrime1(long number) {
-        return LongStream
-                .rangeClosed(2, number / 2)
-                .noneMatch(i -> number % i == 0);
-
+        return LongStream.rangeClosed(2, number / 2).noneMatch(i -> number % i == 0);
     }
 }
