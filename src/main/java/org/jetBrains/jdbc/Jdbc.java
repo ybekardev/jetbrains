@@ -23,11 +23,13 @@ public class Jdbc {
             // Statement creation
             try (Statement statement = con.createStatement()) {
                 // Statement execution
+               /*
                 statement.executeUpdate("CREATE TABLE IF NOT EXISTS HOUSES(" +
                         "id INTEGER PRIMARY KEY," +
                         "name TEXT NOT NULL," +
                         "words TEXT NOT NULL)");
-                /*
+                //statement.executeUpdate("CREATE TABLE IF NOT EXISTS HOUSES(id INTEGER PRIMARY KEY, name TEXT NOT NULL, words TEXT NOT NULL)");
+
                 int i = statement.executeUpdate("INSERT INTO HOUSES VALUES " +
                         "(1, 'Targaryen of King''s Landing', 'Fire and Blood')," +
                         "(2, 'Stark of Winterfell', 'Summer is Coming')," +

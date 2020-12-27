@@ -1,23 +1,18 @@
 package org.jetBrains;
 
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Muhsin {
+    static int count =0;
     public static void main(String[] args) {
-        System.out.println("kc");
-        java.util.Scanner scanner = new java.util.Scanner(System.in);
 
-        System.out.println(callBinarySearch(new int[] {0,1,2,3,4,5,6,7}, 5));
-
-    }
-    public static int callBinarySearch(int[] nums, int key) {
-        // write your code here
-        int num = 0;
-        for(int i= 0; i < nums.length; i++){
-            num = nums[key];
+        String s = "hello";
+        for(int i = 0; i < s.length(); i++){
+            System.out.println(s.charAt(i + 1));
         }
-       // java.util.Arrays arrays = new int
 
-                return num;
     }
 }
