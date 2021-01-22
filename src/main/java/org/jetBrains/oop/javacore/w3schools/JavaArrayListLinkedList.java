@@ -1,9 +1,12 @@
 package org.jetBrains.oop.javacore.w3schools;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 
+@Slf4j
 public class JavaArrayListLinkedList {
 
     public static void main(String[] args) {
@@ -17,7 +20,6 @@ public class JavaArrayListLinkedList {
         cars.add("BMW");
         cars.add("Audi");
         cars.add("Acura");
-
         System.out.println(cars);
         System.out.println(cars.get(0));
         System.out.println(cars.set(3, "Honda"));
