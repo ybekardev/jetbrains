@@ -27,14 +27,9 @@
                     <includes>
                         <!--<runOrder>reversealphabetical</runOrder>-->
                         <!--<include>**/*Runner.java</include>-->
-                        <include>**/ApplicationRunner.java</include>
+                        <include>**/*Run.java</include>
                         <!--<include>**/FailedRunner.java</include>-->
                     </includes>
-                    <testSourceDirectory>${basedir}/src/main/java/</testSourceDirectory>
-                    <testClassesDirectory>${project.build.directory}/classes/</testClassesDirectory>
-                    <failIfNoTests>false</failIfNoTests>
-                    <redirectTestOutputToFile>true</redirectTestOutputToFile>
-                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
             <!--<plugin>
