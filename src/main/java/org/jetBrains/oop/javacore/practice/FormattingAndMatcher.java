@@ -67,7 +67,7 @@ public class FormattingAndMatcher {
             //inside sets, ranges of characters designated by the dash can be used: [1-3]
             String digit = "[0-9]";
             String letter = "[a-zA-Z]";
-            String any = "[az!?.A-Z]";
+            String any = "[a-z!?.A-Z]";
             String exor = "[^abc]";
 
             System.out.println("2".matches(digit)); //true
@@ -86,6 +86,18 @@ public class FormattingAndMatcher {
             System.out.println("rat".matches(p));
     }
 
+    @Test
+    public void test(){
+        String hi = "Hello!";
+        String any = "[a-z!?.A-Z]";
+        //System.out.println(alp);
+        for(int i = 0; i < hi.length(); i++) {
+            String s = String.valueOf(hi.charAt(i));
+            if (s.matches(any)){
+                System.out.print(s);
+            }
+        }
+    }
 
     @Test
     public void shorthands(){
