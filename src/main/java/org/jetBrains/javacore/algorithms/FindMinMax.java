@@ -1,5 +1,8 @@
 package org.jetBrains.javacore.algorithms;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class FindMinMax {
 
     public static void main(String[] args) {
