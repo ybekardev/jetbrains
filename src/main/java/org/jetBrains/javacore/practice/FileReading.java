@@ -63,6 +63,7 @@ public class FileReading {
         UUID id = UUID.randomUUID();
         String path = "src/main/resources/payloads/" + id + ".json";
         File file = new File(path);
+        //to create a directory say: file.mkdirs();
         System.out.println("File Name is: " + file.getName());
         file.createNewFile();
         FileWriter fileWriter = new FileWriter(file);
