@@ -165,7 +165,6 @@ public class FileReading {
     //Pressing Enter doesn't close the input stream. It is still opened and waits for input. To actually close the input stream you need to produce an end-of-file event. In IDEA, you should press Ctrl+D (Windows and Linux) or <command>+D (MacOS).
     //If you need to read a text, use character input streams. Otherwise, for example, while reading audio, video, zip and etc., use byte input streams
 
-
     @Test
     public void testMemory(){
         Runtime runtime  = Runtime.getRuntime();
@@ -204,6 +203,13 @@ public class FileReading {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        //file is created, the data is read and the file is about to be deleted
+        file.delete();
     }
 
+
+    //BufferedReader VS Scanner
+    //BufferedReader: reads sequence of characters, it is synchronous, can be used in multi threaded and larger app, also it is faster.
+    //Scanner: pars the input data, it is non-synchronous, not for multi thread, smaller apps, slower
 }
