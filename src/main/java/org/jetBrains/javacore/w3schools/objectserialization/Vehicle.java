@@ -19,4 +19,6 @@ public class Vehicle implements Serializable {
                 ", year=" + year +
                 '}';
     }
+
+
 }
