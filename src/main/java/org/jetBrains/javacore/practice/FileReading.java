@@ -68,6 +68,7 @@ public class FileReading {
         file.createNewFile();
         FileWriter fileWriter = new FileWriter(file);
         fileWriter.write("This is a test file for: \n" + id );
+        //to add a newline fileWriter.newLine();
         fileWriter.flush();
         fileWriter.close();
 
@@ -175,5 +176,34 @@ public class FileReading {
         System.out.println("Used memory:" + (totalMemory - freeMemory));
     }
 
+    @Test
+    public void writeAndReadFile(){
+        File file = new File("src/main/resources/payload");
+        file.mkdir();
+        file = new File("src/main/resources/payload/payloadBody.json");
+
+        try {
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
+            bufferedWriter.write("Hello world!");
+            bufferedWriter.newLine();
+            bufferedWriter.write("Bye Bye!");
+            //IF the close() is not there the file can't be read!!!
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+            String line;
+            while((line = bufferedReader.readLine()) != null){
+                System.out.println(line);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
