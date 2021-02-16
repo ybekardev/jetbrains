@@ -55,6 +55,7 @@ public class Person {
                     System.out.println(spobj.getName());
                     System.out.println(spobj.getAge());
                     System.out.println(spobj.getHeight());
+                    System.out.println(spobj.getCountry());
                     try {
                         objectInputStream.close();
                 } catch (IOException e) {
